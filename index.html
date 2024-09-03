@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Online Shopping Store</h1>
+        <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </header>
+
+    <main>
+        <section class="product-list" id="product-list">
+            <h2>Featured Products</h2>
+            <div class="products">
+                <div class="product" data-name="Apple" data-price="1.00">
+                    <h3>Apple</h3>
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Apple', 1.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Banana" data-price="0.50">
+                    <h3>Banana</h3>
+                    <p>$0.50</p>
+                    <button onclick="addToCart('Banana', 0.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Orange" data-price="0.75">
+                    <h3>Orange</h3>
+                    <p>$0.75</p>
+                    <button onclick="addToCart('Orange', 0.75)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
